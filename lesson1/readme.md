@@ -5,6 +5,7 @@
 不过在路上吹着冷风的时候，突然想到，居中、左对齐，`text-align` 不是仅仅只对文本设置对齐方式啊，还可以对 `inline-block` 元素设置对齐方式，那这样的话不就是可以用多个元素的组合的方式来到达效果么。
 
 先看一下最后的效果：
+
 ![dfg](http://mmbiz.qpic.cn/mmbiz_gif/7aMczKfM23KAH6lCIyP1pIl4JHiaJsOOgAIGib1cYRiaic3NhmSwVQV1CjjMZfcu6icsg00LHlaichrA9ibjHxmjGJfZw/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
 
 在这个 gif 的图片中，当文字变多的时候，超过一行的时候，对齐方式就改变了。就如前面我所提到的那样：
@@ -14,6 +15,7 @@
 * 最后再让这个子元素转为 inline-block 或者不转为 inline-block，反正不要是块级元素就对了，因为块级元素会让这个子元素撑满父级元素的宽度，就达不到预期的效果了；
 
 结合上面这三点，然后把上面的那个 gif 图稍微调整了。加个背景色重新录制 gif 后就可以看到这样的一个效果。
+
 ![git2](http://mmbiz.qpic.cn/mmbiz_gif/7aMczKfM23KAH6lCIyP1pIl4JHiaJsOOgWk2CuicgA0Iz8nlsEFzBO2Zph1BlzbR0sEcxYMDDo2kj8l53Few0HcA/0?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
 
 OK了，这样我想应该就比较明显看到区别了。当子元素的宽度被撑满的时候，内容都是左对齐的，而没有撑满时，就算是左对齐，我们也看不到效果，反而可以看到因为父元素的 text-align: center; 的影响，变成居中对齐了。
