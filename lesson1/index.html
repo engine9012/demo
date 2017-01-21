@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一行居中多行居左的效果如何实现</title>
+</head>
+<style>
+    .ps {
+        text-align: center;
+    }
+    .ps > span {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .flex {
+        text-align: center;
+    }
+    .flex > span {
+        text-align: left;
+        display: inline-flex;
+    }
+    
+    .tab-cell {
+        display: table;
+        margin: 0 auto;
+        text-align: left;
+    }
+</style>
+<body>
+    <div>
+        <p class="ps"><span>texttexttexttexttexttexttexttexttexttext</span></p>
+        <p class="ps"><span>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</span></p>
+    </div>
+
+    <div>
+        <p class="flex"><span>texttexttexttexttexttexttexttexttexttext</span></p>
+        <p class="flex"><span>文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</span></p>
+    </div>
+    <div>
+        <p class="tab-cell">texttexttexttexttexttexttexttexttexttext</p>
+        <p class="tab-cell">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+    </div>
+</body>
+</html>
